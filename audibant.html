@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title> Audibant </title>
+  <link rel="stylesheet" href="style.css" media="screen" />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+  </script>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="page-title">
+    <h1 class="container">Audibant: The wonders of mobile design</h1>
+  </div>
+  <p id="menu" class="nav">Menu</p>
+  <div class="menu nav" style="display:none;">
+    <a href="#1">Prototyping</a>
+    <a href="#2">Takeaways</a>
+    <a href="index.html">Back</a>
+  </div>
+  <div class="page content">
+    <div class="quote">
+      <img width="50" src="pic/quote.png">
+      <p>People interact with mobile phones differently in different contexts, so what works perfectly on a PC screen may not make sense on a mobile screen.</p>
+      <img class="quote2" width="50" src="pic/quote2.png">
+    </div>
+      <p>Audibant grew out of a team project for an entreperneurship class. We tried to create a new platform for discovering podcasts. The user can choose two routes to discover podcasts: a logical route and a quirky route. The logical route is
+        category based: we ask the users what kind of podcasts s/he likes to listen (political, fictional, etc.) and we make recommendations accorddingly. The quirky route is where the creativity kicks in. In the quirky route, we ask users a set of
+        seamingly unrelated quirky questions, such as "what did you do last Sunday", and then make recommendations. It's like taking a fun quiz to discover a podcast.</p>
+      <h2 id="1">Prototyping</h2>
+      <p>When we first developed our website, the pictures on our quirky route have the same height and width on mobile as on PC. Yet, when we showed our prototype to people, those who interacted through a PC had no trouble filling out the quirky
+        form, but some who interacted through a phone couldn’t figure it out. Below are screenshots of our PC and mobile layout:</p>
+      <div class="image-wrap">
+        <img width="80%" src="pic/pc.png">
+        <img src="pic/mobile1.png">
+    </div>
+        <p>While many teammates thought that those people just weren’t as technically savvy, I thought it was just bad design. I in-person demoed to a friend who uses her smartphone frequently, but she kept tapping on the “love story” picture, and
+          wondered why the website was not responding. She expected the screen to change once she tapped on “love story”, while I was expecting her to scroll down to the next question. So I talked to another friend majoring in graphic design, and
+          her
+          suggestion was to make the pictures smaller, so that one can view all the multiple-choice options in one screen, and have a preview of the next question. In this way, it gives nuances to people that the quirky route is multiple-choice
+          questions. Indeed, after the change, people found it much more intuitive.</p>
+        <div class="image-wrap">
+          <img src="pic/mobile2.png">
+    </div>
+          <h2 id="2">Takeaways</h2>
+          <p>So here are my three takeaways:</p>
+          <p>1. The mobile phone is not simply a smaller PC screen. Rather than trying to take whatever PC design to fit into the mobile screen, the mobile screen entitle a whole new set of design considerations. People interact with mobile phones
+            differently in different contexts, so what works perfectly on a PC screen may not make sense on a mobile screen.</p>
+          <p>2. It is important to in-person demo to customers and watch them using my product. Oftentimes designers/engineers get so into the product that they can’t look at their product with a fresh pair of eyes anymore. So talking to users who
+            have never seen the product before is an important part of the design process.</p>
+          <p>3. Even if the product itself is good, confusing UX design can turn customers away. I once heard the phrase “selling anything is selling and experience.” And something as simple as changing the picture size can greatly alter the user
+            experience.</p>
+        </div>
+        <div id="footer" class="content"></div>
+</body>
+
+</html>
