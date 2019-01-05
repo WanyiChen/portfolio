@@ -18,24 +18,28 @@
   <div class="menu nav" style="display:none;">
     <a href="#1">The Product</a>
     <a href="#2">Wireframing and storytelling</a>
+    <a href="#3">Designing around constraints</a>
+    <a href="#4">Coloring</a>
     <a href="index.html">Back</a>
   </div>
   <div class="page content">
     <div class="quote">
       <img width="50" src="pic/quote.png">
-      <p></p>
+      <p>As a designer, I wanted to come up with the best UX design possible. Yet as a team member, I knew that the best UX design might not meet all the constraints.</p>
       <img class="quote2" width="50" src="pic/quote2.png">
     </div>
-      <p>Flights & Food is a final group project for my Modern Web Programming class, where I co-developed a website with my great teammates Jie He and Fan Feng. This is the first time that I stepped up to take the designer role of the team: I did
+      <p><a target="_blank" href="https://github.com/WanyiChen/flightsAndFood">Flights & Food</a> is a final group project for my Modern Web Programming class, where I co-developed a website with two great teammates. This is the first time that I
+        stepped up to take
+        the designer role of the team: I did
         the wireframing, UI design, and the majority of the CSS, while my teammates implemented most of the functionality. For the class, we only needed to code the frontend: backend API was provided by the instructors, but we were encouraged to use
         third-party APIs as well.</p>
       <h2 id="1">The Product</h2>
       <p>Flights & Food is a website that helps travelers better plan their trips: we selected four popular large cities and enable users to search for flights and restaurants for each city. Users can then save their favorite flights and food
         selections, and later view those at the “My Trips” page.</p>
       <div class="image-wrap">
-        <img width="80%" src="pic/ff-login.jpeg">
-        <img width="80%" src="pic/ff.PNG">
-        <img width="80%" src="pic/ff-ny.png">
+        <img width="100%" src="pic/ff-login.jpeg">
+        <img width="100%" src="pic/ff2.png">
+        <img width="100%" src="pic/ff-ny.png">
       </div>
         <h2 id="2">Wireframing and storytelling</h2>
         <p>Normally, when starting a new project, I would list out a set of project requirements/features, separate the essentials from the nice-to-haves, and then create the wireframes around those feature requirements. This time, however, after
@@ -47,8 +51,30 @@
         <p>I assumed the designer’s role, yes, but I did not have authority over any teammates. Before I presented, I wondered how I would convince someone else to implement my design. I learnt that part of the answer lies in good storytelling.
           Wireframes and personas can aid the storytelling of how users interact with products, and that story in turn can provide a roadmap of where the product and the team need to head to. Good stories interest people, and even let you influence
           without authority.</p>
-      </div>
-      <div id="footer" class="content"></div>
+        <h2 id="3">Designing around constraints</h2>
+        <p>As a designer, I wanted to come up with the best UX design possible. Yet as a team member, I knew that the best UX design might not meet all the constraints: engineering constraints, time constraints, and since this was a class project,
+          non-negotiable requirement constraints imposed by the instructors.</p>
+        <p>For instance, initially I wanted to have a back button on every page other than the home page that allows the user to go back to the previous page, and all the users’ previous selections would be there. This was more doable with cookies
+          and backend routing, but would be too hard for a purely frontend project. So I got rid off the back button and instead had “Home” and “My Trips” links at the top right corner of every page.</p>
+        <p>This was where my engineering background helped. Understanding the development process as well as the backend database enabled me to tell which features were possible and which were not. Having fair estimates of how difficult it was to
+          implement each feature helped me to prioritize features and made it easier for the team to actually implement the design.</p>
+        <h2 id="4">Coloring</h2>
+        <p>Coloring was not my strength, so there were a lot of trail and error. I took feedback and asked for help. In general, I wanted the page to look clean, modern, but also engaging and "appetizing" (since half of the website is about food).
+          Red is usually an appetizing color,
+          yet I've found that if used too much, then the page doesn't look clean. In the end, I mostly colored the page white and gray, using red to highlight. Below are some of my coloring attempts:</p>
+        <div class="image-wrap">
+          <img width="100%" src="pic/ff-color1.png">
+          <img width="100%" src="pic/ff-color2.png">
+          <img width="100%" src="pic/ff-color3.png">
+          </div>
+          <p>This is the ultimate version:</p>
+          <div class="image-wrap">
+            <img width="100%" src="pic/ff-ny.png">
+          </div>
+            <p>I found it hard to balance feeling clean and modern vs. appealing engaging and appetizing. Yet balancing design requirements does not necessarily mean compromising. On the contrary, I found that the final design, considering all
+              requirements, came to be better than what I originally had.</p>
+          </div>
+          <div id="footer" class="content"></div>
 </body>
 
 </html>

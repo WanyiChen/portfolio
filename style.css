@@ -13,7 +13,7 @@ p, a {
   font-size: 14pt;
 }
 
-.content p, .content h1, .content h2, .content a {
+.content p, .content h1, .content h2, .content h3 {
   margin: 1%;
 }
 
@@ -24,6 +24,7 @@ a {
 }
 
 .content a {
+  color: #736321;
   text-decoration: underline;
 }
 

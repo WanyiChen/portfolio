@@ -16,73 +16,79 @@
   </div>
   <p id="menu" class="nav">Menu</p>
   <div class="menu nav" style="display:none;">
-    <a href="#1">The Current Problem</a>
-    <a href="#2">The Product and UX Design</a>
-    <a href="#3">Evaluation</a>
+    <a href="#1">The Initial Design</a>
+    <a href="#2">Poster as Prototype</a>
+    <a href="#3">The Re-design</a>
+    <a href="#4">Looking Back</a>
     <a href="index.html">Back</a>
   </div>
   <div class="page content">
-    <p>This was an interview practice question. The question was simply "design an ATM for the blind." Yet realistically, in order to make banks widely adopt such an accessible ATM, the ATM must provide a smooth user experience for users without
-      disabilities as well.</p>
-    <h2 id="1">The Current Problem</h2>
-    <p>I first researched the current ATMs. Americans with Disabilities Act has made it a requirement that ATMs should be accessible to the visually impaired, so now most ATMs in the U.S. meet this requirement. Most are talking ATMs with headphone
-      jacks. Once the user plugs in a headphone, audio playback starts.</p>
-    <div class="image-wrap">
-      <img src="pic/keyboard.JPG">
+    <div class="quote">
+      <img width="50" src="pic/quote.png">
+      <p>Building the website was one story, and actually reaching out to an audience was another. The latter is also an important part, but far beyond the scope of engineering and design.</p>
+      <img class="quote2" width="50" src="pic/quote2.png">
     </div>
-      <p>Then, the user uses the standard ATM keyboard for input. The keyboard only has a few keys, but the combination of different keys can correspond to different functions. For
-        example, pressing “30” can mean “get cash”.</p>
+      <p>This is my first design project. Notably, it was my first coding project as well. I did not learn computer science in high school. When I first came across computer science in college and immediately became interested in it, I suddenly
+        wondered why I had not known it earlier. That tiny curiosity soon grew stronger and stronger. In fall 2016, I did an independent study with Prof. Ryan Shaw in the School of Information and Library Science to study CS education in U.S. and
+        Chinese high schools. Then, after all the research and literature review, I had some interesting insights and wrote a paper. Yet after that, I was like, “So what?”</p>
+      <p><a target="_blank" href="http://cs-wanyi02.cloudapps.unc.edu/">The website</a> was an attempt to answer the “so what” question. Few people like reading academic papers, so I wanted to present my research in a different, hopefully more
+        engaging and
+        personalized way. I wanted the website to have a “low floor
+        and high ceiling”: it should be easily to explore in order to reach a boarder audience, yet it should also offer more content for those who want to know more. Those were my design challenges.
+      </p>
+      <h2 id="1">The Initial Design</h2>
+      <p>To meet the "low floor and high ceiling" requirement, I had the "read more" and "show less" feature for all my content. Based on the website's topic, I also wanted to create more personalized contents based on the users nationality (U.S.,
+        China) and occupation (teacher, student, policy maker, other). I was influenced by the concept of "action journalism":
+        <a target="_blank" href="https://www.huffingtonpost.com/alana-moceri/journalism-for-action_b_5059893.html">action journalism</a> seeks to not only provide readers with information, but also enable users to take actions based on the
+        information. So I seeked to provide ways for different people to get involved in high school CS education. The initial
+        wireframe was as follows:</p>
       <div class="image-wrap">
-        <img src="pic/atm1.JPG">
-        <img src="pic/atm2.JPG">
+        <img width="100%" src="pic/cs-wireframe1.JPG">
     </div>
-        <p>I personally tried interacting with two ATMs in this way. The two ATMs have different hardware design, yet they seem to use the same software: they have identical touch screen display, and they use the same voice for audio playback. I
-          noticed some problems during interaction:
-        </p>
-        <p>1. Depending on the ATM’s hardware design, the headphone jack could be hard to find.</p>
-        <p>2. The helpline number was announced at the beginning of the interaction. Most of the time I wouldn’t need this information, but if I did want to call for help later in the interaction, I don’t think I could remember this phone number.</p>
-        <p>3. It was difficult, if possible at all, for the blind to choose a language. When I plugged in my headphone, one ATM started to play instructions alternating in English and Spanish. The audio seemed to start at a random place, so I had to
-          wait for the long Spanish instruction to finish. And if I didn’t know either English or Spanish, I wouldn’t know how to proceed. Another ATM started in English, and one instruction was “press 00 to choose language.” Yet if I did not know
-          English, I wouldn’t understand this instruction.</p>
-        <p>4. There was no error message for some steps. For example, when I inserted my card facing the wrong way, neither of the ATMs gave me an error message. Instead, they terminated the interaction after 30 seconds of inactivity.</p>
-        <p>5. The audio instructions for most steps were long, and if I missed a piece of instruction and pressed the keys for repeat, it repeated the whole instruction from the beginning. This can be an annoying user experience.</p>
-        <p>6. When I accidentally touched the touch screen, the audio stopped playing, and there was no way to resume it.</p>
-        <h2 id="2">The Product and UX Design</h2>
-        <p>Among the problems discussed above, only the first one is a hardware problem. The rest can be solved by changing the software. Since different ATMs can deploy the same software, my proposed new product will first be software only. The
-          off-the-shelf software will be easy to configure and run on existing ATMs. Below is a high-level interaction flow for blind users:</p>
+        <p>I wanted the "How can I get involved" bar at the footer to stand out, so I chose a contrasting background color. After the user clicks on the orange bar, the page will ask their nationality and occupation, and then it will display
+          relevant
+          content.</p>
+        <h2 id="2">Poster as Prototype</h2>
+        <p>The next step would be user testing. Right around that time, I got a chance to present a poster at my university's Celebration of Undergraduate Research event. There were a lot of firsts involved in this project: it was my first research
+          poster presentation as well! I suddenly thought, "Why not use this chance to do some user testing?" So I
+          designed my poster as a paper prototype for my website.</p>
         <div class="image-wrap">
-          <img src="pic/atm-flow.PNG">
-      </div>
-          <p>Here are more detailed solution to the current talking ATMs problems:</p>
-          <p>1. Instructions for the “choose language” step should be read in different languages. For example, “Press 00 for English. Press 01 for Spanish (in Spanish). Press 02 for Chinese (in Chinese)...” To optimize speed, the languages should
-            be
-            in
-            the order of most frequently used. Further, the software should only require this step if it is the user’s first time using an ATM. For future interactions, language preferences should be saved while providing a way to change language.
-            For
-            example, “Press 99 to change language (in user’s preferred language).”</p>
-          <p>2. Have better error messages at all steps. Each error message should say what the error is, some possible fixes, and the helpline number. It is more efficient to announce the helpline number at the moment of error than at the very
-            beginning.
-            For example, most ATMs require the user to insert the card with numbers facing up and to the left. This is easy to accomplish for users with good vision, but can be challenging for the blind, especially if the card is completely flat. So
-            if
-            the ATM detects card insertion but cannot read the card, it should tell the user, “Cannot read card. Try inserting it again, with numbers facing up and to the left. If there is still error, please call for help at xxx-xxx-xxxx.” Then
-            give
-            the
-            card back to the user.</p>
-          <p>3. Have better ways to navigate through the instructions. In addition to the key code for repeating the whole instruction, have another key code (such as “44”) for just repeating the previous option or sentence. Have one more key code
-            (such
-            as “66”) for skipping to the next option or sentence. These key codes should be consistant throughout the interaction.</p>
-          <p>4. If the user accidentally touches the touch screen, the audio should not stop playing. If the user really wants to stop the audio, s/he can just unplug the headphone.</p>
-          <h2 id="3">Evaluation</h2>
-          <p>Below is an evaluation of the new product using the usability criteria:</p>
-          <p>1. Speed. Speed is optimized by having better navigation through the instructions. If user knows what option s/he wants, s/he can quickly skip to that option without listening to all the instructions. If s/he miss a part of the
-            instruction, s/he can just make the ATM repeat the missed part and not the whole instruction.</p>
-          <p>2. Ease of use. For blind users who have used talking ATMs before, our product’s interaction mechanism is not radically different. The product still relies on existing hardware and uses keyboard for input and audio for output, making
-            the learning curve low. For new blind users, our clear step-by-step instruction can easily guide them through. We further optimizes ease of use by having better error messages at all steps.</p>
-          <p>3. Security. Security is ensured by requiring a password before making transactions and having cameras.</p>
-          <p>4. Privacy. Privacy is ensured by using headphones and keyboards. Headphones ensure that only the user can hear sensitive bank account information. Using keyboards (not saying the transaction out loud) ensures that others nearby do not
-            overhear transaction information.</p>
+          <img width="100%" src="pic/cs-poster.jpg">
         </div>
-        <div id="footer" class="content"></div>
+          <p>If someone would ask about the "How can I get involved" part of the poster, that would be equivalent as clicking the orange bar on the website. I would then hand out a prepared flyer, which equaled the next page on the website. On the
+            presentation day, many stopped by, but very few asked about "How can I get involved."</p>
+          <p>The tricky part would be to figure out why. I asked for some help from my professors. One suggested that it wasn't apparent that the orange bar was clickable/actionable. Besides, people often ignore footers. It wasn't enough to use a
+            contrasting background color. It was better for the part to stand out as a clearly clickable call-to-action button.</p>
+          <h2 id="3">The Re-design</h2>
+          <p>Engineers are often told to not reinvent the wheel. I came to learn that the same holds true for designers as well. For the next few days, I looked at political campaign websites and studied their call-to-action buttons. I then
+            redesigned
+            my website as follows:</p>
+          <div class="image-wrap">
+            <img width="100%" src="pic/cs-wireframe2.jpg">
+        </div>
+            <p>Now the orignal orange footer bar appeared as a item on the side bar menu. There were other reasons that I transformed the whole menu from a horizontal bar to a side bar. First, it could be hard to scan accross many items
+              horizontally.
+              Secondly, a side bar would make it easier to design and code for mobile (this was the wireframing before prototype testing, but the idea is that the side bar on the PC screen can be easily turned into the menu on the mobile screen):</p>
+            <div class="image-wrap">
+              <img width="100%" src="pic/cs-mobile.JPG">
+            </div>
+              <p>In the end, there was one more change. I directly placed the nationality and occupation questionaire on the side bar. This would save the users one click and make the part stand out even more. Below is a screenshot of the final
+                website:</p>
+              <div class="image-wrap">
+                <img width="100%" src="pic/cs-final.png">
+                </div>
+                <p>And the mobile version (the menu expands upon user click):</p>
+                <div class="image-wrap">
+                  <img width="350px" src="pic/cs-mobile1.jpg">
+                  <img width="350px" src="pic/cs-mobile2.jpg">
+                  </div>
+                  <h2 id="4">Looking Back</h2>
+                  <p>I have said that the website was an attempt to answer the “so what” question. Looking back, was the attempt successful? Frankly, no. Building the website was one story, and actually reaching out to an audience was another. The
+                    latter is also an important part, but far beyond the scope of engineering and design. It is much like the classical question asked in entrepreneurship, “If you build it, will they come?” The answer will not always be clear from
+                    the
+                    beginning. Yet since then, I came to think of research as a form of entrepreneurship.</p>
+                </div>
+                <div id="footer" class="content"></div>
 </body>
 
 </html>

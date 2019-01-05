@@ -1,5 +1,5 @@
 $(document).ready(() => {
-  $("#footer").load("/footer.html");
+  $("#footer").load("https://wanyichen.github.io/portfolio/footer.html");
 
   $("#ff").on("click", () => {
     window.open("ff.html", "_self", false);
