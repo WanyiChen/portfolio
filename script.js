@@ -1,6 +1,9 @@
 $(document).ready(() => {
   $("#footer").load("https://wanyichen.github.io/portfolio/footer.html");
 
+  $("#cp").on("click", () => {
+    window.open("cp.html", "_self", false);
+  });
   $("#ff").on("click", () => {
     window.open("ff.html", "_self", false);
   });

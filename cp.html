@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title> Accessible Keyboard </title>
+  <link rel="stylesheet" href="style.css" media="screen" />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+  </script>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="page-title">
+    <h1 class="container">Color Match: Typing with Cerebral Palsy</h1>
+  </div>
+  <p id="menu" class="nav">Menu</p>
+  <div class="menu nav" style="display:none;">
+    <a href="#1">The Challenge</a>
+    <a href="#2">Alternative Keyboards</a>
+    <a href="#3">Game as Prototype</a>
+    <a href="#4">User Testing</a>
+    <a href="#5">Reflection and Going Forward</a>
+    <a href="index.html">Back</a>
+  </div>
+  <div class="page content">
+    <div class="quote">
+      <img width="50" src="pic/quote.png">
+      <p>The game was developed under the assumption that the participants can recognize the alphabet. However, during the user testing, it turned out that neither participant knew the alphabet.</p>
+      <img class="quote2" width="50" src="pic/quote2.png">
+    </div>
+      <p><a target="_blank" href="https://github.com/bishop-research-group-2019-spring/ColorMatch">Color Match</a> is a project developed in <a target="_blank" href="https://www.cs.unc.edu/~gb/research/">Prof. Gary Bishop's Enabling Technology Lab</a>.
+        More than 2 in 1,000 children are born with Cerebral Palsy (CP). Many of them lack a viable way for everyday communication. They are often non-verbal and do not have the fine motor control to use a regular keyboard. However, they may be able
+        to manage imprecise swipe motions.
+        This project aims to explore the viability of a swipe keyboard for CP children.
+      </p>
+      <h2 id="1">The Challenge</h2>
+      <p>Cerebral Palsy is a disorder that affects motor control as a result of early brain injury. <a target="_blank" href="https://www.tandfonline.com/doi/abs/10.1080/09638280500158422">Different studies</a> in different years have estimated that
+        among CP children, 62-71% have vision impairments, 44-51% have haptic
+        impairments/sensibility loss, 42-81% have speech impairments, 23-44% have cognitive impairments, and 25% have hearing impairments. Notably, among children with CP and cognitive impairments, 30-41% have severe cognitive impairment (IQ < 50).
+          Epilepsy is another common co-occurring disability, affecting 22-40% of children with CP.</p> <p>Due to motor impairments, children with severe CP have difficulties using a regular QWERTY keyboard, such as the one shown in below. A
+          regular keyboard requires users to press one key to enter one letter at a time. Since the size of each individual key is relatively small, a regular keyboard requires precise motion, which children with severe CP cannot manage.</p>
+      <div class="image-wrap">
+        <img width="80%" src="pic/qwerty.png">
+            </div>
+        <h2 id="2">Alternative Keyboards</h2>
+        <p>Fortunately, there are alternative keyboards. Swipe keyboard is becoming popular on smartphones. Swipe keyboards have the same QWERTY key arrangement, but instead of pressing one key at a time, users swipe across the keyboard to enter one
+          word at a time. Since swiping does not have to be as precise as typing, children with severe CP may be able to manage swipe motion. Below is a picture of Microsoft's <a target="_blank" href="https://www.microsoft.com/en-us/swiftkey">SwiftKey</a>:</p>
+        <div class="image-wrap">
+          <img width="40%" src="pic/swiftKey.png">
+                </div>
+          <p>However, the QWERTY key arrangement of SwiftKey does not have any apparent order and it can take significant time to learn the location of each letter. Another alternative is dynamic onscreen keyboard. Below is an example of a dynamic
+            keyboard developed by <a target="_blank" href="https://www.softpedia.com/get/System/System-Miscellaneous/Dynamic-Keyboard.shtml">Softpedia</a>. Instead of using the QWERTY arrangement, dynamic keyboards group the 26 letters into five
+            blocks in alphabetical order. When users
+            select a block of letters, the keyboard changes to display the five letters in the original five blocks. Users can then select an individual letter. Considering the cognitive impairment of children with severe CP, dynamic keyboards may
+            be easier for them to learn.</p>
+          <div class="image-wrap">
+            <img width="46%" src="pic/dynamic-keyboard1.png">
+            <img width="40%" src="pic/dynamic-keyboard2.png">
+            </div>
+            <h2 id="3">Game as Prototype</h2>
+            <p>While there is abundant medical documentation about CP children’s motion constraints, few literatures study how CP children manage swipe motion or interact with touchscreens. To study how children with CP interact with touchscreens
+              and manage swipe motion, I developed a browser-based <a target="_blank" href="https://bishop-research-group-2019-spring.github.io/ColorMatch/">color match game</a>. The game's interface is shown below:</p>
+            <div class="image-wrap">
+              <img width="90%" src="pic/gameUI.png">
+              </div>
+              <p>The game aims to simulate how users will type on a swipe keyboard, but it is much simpler than the actual typing task. Instead of having all 26 letters, the game only has four large letters located large keys with different colors.
+                The game interface’s header suggests which key to select, so users do not need to think about what to type, which is a complicated process that involves knowledge of spelling. Once the start button is clicked, a user will try to
+                touch the key that matches the color and letter of the header. Once a correct match is made, the user earns one point, and the header changes color and letter. The user will then move his/her finger to make the next match. The user
+                can earn a maximum of 30 points, and there is no penalty for touching the wrong key.</p>
+              <p>A backend datasheet is used to record users’ activities. To gather roughly equal amount of data for different types of swipes (left, right, up, down, diagonal up-left, diagonal up-right, diagonal down-left, diagonal down-right), the
+                header changes according to a planned sequence.</p>
+              <h2 id="4">User Testing</h2>
+              <p>I then conducted user testing with two CP teenagers (one male and one female) at a high school in North Carolina. Both participants played the game on a 12.5-inch Chromebook touchscreen. Both participants had limited motion control
+                over both hands, limited vision, limited speech, and limited cognitive abilities.</p>
+              <p>The game was developed under the assumption that the participants can recognize the alphabet. However, during the user testing, it turned out that neither participant knew the alphabet. Moreover, despite many attempts to explain and
+                demonstrate the game, the male participant could not understand how the game’s rules. Half way through the game, he began swiping across the entire screen with his whole fist, inevitably touching the correct key, which made the
+                header change. He might have understood the game as simply swiping across the entire screen to make the header change.</p>
+              <p>In addition, Both participants had difficulty with eye-hand coordination. Their necks and arms were held at fixed angles so that sometimes when they could see the screen, they could not touch it, and vice versa. It took significant
+                effort to adjust the touchscreen to the correct angle so that they could both see and touch the screen.</p>
+              <h2 id="5">Reflection and Going Forward</h2>
+              <p>The fact that one participant could not understand the game made me think that the game may be harder than it appears to be. So I tried to analyze the steps that the participants took to score one point:</p>
+              <div class="image-wrap">
+                <img width="70%" src="pic/goms.png">
+              </div>
+                <p>Now I can see that the game required substantial cognitive, perceptive, and motor skills. For perception, the game relied only on visual perception, but both participants had significant visual impairments. For cognition, the game
+                  requires the ability to compare different shapes/colors as well as basic reasoning. Since the game did not provide negative feedback, participants could have more difficulties deciding whether they touched the wrong key. For
+                  motion, it could be challenging to constantly adjust their arms and fingers to the desired location.</p>
+                <p>To aid future designs, I developed sets of perceptive, cognitive, motor and social constrains and their corresponding design recommendations for children with CP. The lists are based on medical journals, YouTube videos documenting
+                  everyday activities of children with CP, and my own user testing observations. The set can be found in my <a target="_blank" href="https://www.slideshare.net/slideshow/embed_code/key/tOfhwbbZPQW5ml">full report</a>.</p>
+                <p>Going forward, it is also worth exploring alternatives to learning the alphabets and spelling. Previous studies showed that <a target="_blank" href="https://www.blissonline.se/">Bliss Symbols</a> could be a viable alternative
+                  communication system for CP children. Compared to the abstract alphabets and spellings, Bliss Symbols are more picture-based. A few examples of
+                  Bliss Symbols and phrases are shown below:</p>
+                <div class="image-wrap">
+                  <img width="70%" src="pic/bliss.png">
+                  </div>
+                  <p>Although scientists have researched how Bliss Symbols can benefit cognitively impaired children for decades, not all children who may benefit from Bliss Symbols are utilizing these alternative communication systems. It is still
+                    challenging to develop off-the-shelf digital augmented and alternative communication systems that can address CP children’s complex communication needs, because the system design needs to take various cognitive, perceptive, motor
+                    and social constraints into account.</p>
+                </div>
+                <div id="footer" class="content"></div>
+</body>
+
+</html>
